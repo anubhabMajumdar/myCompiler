@@ -1,0 +1,12 @@
+b = 10
+c = 3
+t0 = b * c
+a = t0
+t1 = a > b
+IF t1
+ifgoto L11
+elsegoto L12
+L11:
+t2 = a - 1
+a = t2
+L12:

@@ -1,0 +1,24 @@
+t0 = a - b
+c = t0
+W10:
+t1 = c > 0
+IF t1 
+ifgoto W11
+elsegoto W12
+W11:
+t2 = c - 2
+c = t2
+goto W10
+W12:
+t3 = a > b
+IF t3
+ifgoto L11
+elsegoto L12
+L11:
+t4 = b - 5
+b = t4
+goto L13
+L12:
+t5 = b + 5
+b = t5
+L13:

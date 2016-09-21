@@ -1,0 +1,57 @@
+SUB A
+LXI H, a
+MOV A, M
+LXI H, b
+MOV B, M
+SUB B
+LXI H, t0
+MOV M, A
+LXI H, t0
+MOV A, M
+LXI H, c
+MOV M, A
+ORG W10:
+COMP(c, 0)
+JNZ W11
+JMP W12
+ORG W11:
+LXI H, c
+MOV A, M
+MVI B, 2
+SUB B
+LXI H, t2
+MOV M, A
+LXI H, t2
+MOV A, M
+LXI H, c
+MOV M, A
+JMP W10
+ORG W12:
+COMP(a, b)
+JNZ L11
+JMP L12
+ORG L11:
+LXI H, b
+MOV A, M
+MVI B, 5
+SUB B
+LXI H, t4
+MOV M, A
+LXI H, t4
+MOV A, M
+LXI H, b
+MOV M, A
+JMP L13
+ORG L12:
+LXI H, b
+MOV A, M
+MVI B, 5
+ADD B
+LXI H, t5
+MOV M, A
+LXI H, t5
+MOV A, M
+LXI H, b
+MOV M, A
+ORG L13:
+

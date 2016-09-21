@@ -1,0 +1,1 @@
+yacc -d parse_tree.y && lex parse_text_2.l && gcc -c lex.yy.c y.tab.c -w && gcc -o output lex.yy.o y.tab.o -ll -w && ./output < input.c
